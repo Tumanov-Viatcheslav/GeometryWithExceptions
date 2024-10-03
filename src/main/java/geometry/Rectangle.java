@@ -1,6 +1,6 @@
 package geometry;
 
-public class Rectangle {
+public class Rectangle extends Figure{
     double width, length;
 
     public Rectangle(double width, double length) throws Exception {
@@ -18,5 +18,15 @@ public class Rectangle {
                 "width=" + width +
                 ", length=" + length +
                 '}';
+    }
+
+    @Override
+    public double perimeter() {
+        return 0;
+    }
+
+    @Override
+    public double area() {
+        return 0;
     }
 }

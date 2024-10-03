@@ -40,4 +40,24 @@ public class TestRectangle {
                 ()->{Rectangle r2 = new Rectangle(150, 0);},
                 "сообщение от ассерта");*/
     }
+
+    @Test
+    public void testPerimeter1(){
+        //todo
+        // метод тестирования метода1 {
+        //		создаем объект Класса, настраиваем свойства
+        //      w=10 l=15   perimeter = 50
+        //		Assertions.assertEquals()
+        //	}
+    }
+
+    @Test
+    public void testArea1(){
+        //todo
+        //метод тестирования метода1 {
+        //		создаем объект Класса, настраиваем свойства
+        //      w=10 l=15   area = 150
+        //		Assertions.assertEquals()
+        //	}
+    }
 }
