@@ -1,5 +1,7 @@
 package geometry;
 
+import java.util.Objects;
+
 public class Rectangle extends Figure{
     double width, length;
 
@@ -32,5 +34,17 @@ public class Rectangle extends Figure{
     @Override
     public double area() {
         return width*length;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rectangle rectangle)) return false;
+        return Double.compare(width, rectangle.width) == 0 && Double.compare(length, rectangle.length) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(width, length);
     }
 }
