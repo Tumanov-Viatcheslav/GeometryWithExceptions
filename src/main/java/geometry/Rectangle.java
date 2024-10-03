@@ -3,11 +3,15 @@ package geometry;
 public class Rectangle extends Figure{
     double width, length;
 
-    public Rectangle(double width, double length) throws Exception {
-        if(width<0 || length <0)
-            throw new Exception("длина и ширина прямугольника не могут быть отрицательными!");
+    public Rectangle(double width, double length) throws GeometryException {
+       // if(width<0 || length <0)
+       //     throw new GeometryException("длина и ширина прямугольника не могут быть отрицательными!");
+        if(width < 0)
+            throw new NegativeLengthException("ширина не может быть отрицательной!!!", width);
+        if(length < 0)
+            throw new NegativeLengthException("длина не может быть отрицательной!!!", length);
         if(width==0 || length ==0)
-            throw new Exception("длина и ширина не могут быть 0");
+            throw new ZeroLengthException("длина и ширина не могут быть 0");
         this.width = width;
         this.length = length;
     }

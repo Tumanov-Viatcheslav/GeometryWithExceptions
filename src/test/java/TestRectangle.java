@@ -1,4 +1,7 @@
+import geometry.GeometryException;
+import geometry.NegativeLengthException;
 import geometry.Rectangle;
+import geometry.ZeroLengthException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,28 +16,28 @@ public class TestRectangle {
     }
     @Test
     public void testConstructorBad1(){
-        Assertions.assertThrows(Exception.class,
+        Assertions.assertThrows(NegativeLengthException.class,
                                 ()->{Rectangle r1 = new Rectangle(-15, 10);});
     }
 
     @Test
     public void testConstructorBad2(){
-        Assertions.assertThrows(Exception.class,
+        Assertions.assertThrows(NegativeLengthException.class,
                 ()->{Rectangle r2 = new Rectangle(15, -10);});
     }
     @Test
     public void testConstructorBad3(){
-        Assertions.assertThrows(Exception.class,
+        Assertions.assertThrows(NegativeLengthException.class,
                 ()->{Rectangle r2 = new Rectangle(-15, -10);});
     }
     @Test
     public void testConstructorBad4(){
-        Assertions.assertThrows(Exception.class,
+        Assertions.assertThrows(ZeroLengthException.class,
                 ()->{Rectangle r2 = new Rectangle(0, 10);});
     }
     @Test
     public void testConstructorBad5(){
-        Assertions.assertThrows(Exception.class,
+        Assertions.assertThrows(ZeroLengthException.class,
                 ()->{Rectangle r2 = new Rectangle(150, 0);});
         /*Assertions.assertThrows(Exception.class,
                 ()->{Rectangle r2 = new Rectangle(150, 0);},
