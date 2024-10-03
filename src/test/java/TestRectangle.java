@@ -43,21 +43,33 @@ public class TestRectangle {
 
     @Test
     public void testPerimeter1(){
-        //todo
         // метод тестирования метода1 {
         //		создаем объект Класса, настраиваем свойства
         //      w=10 l=15   perimeter = 50
         //		Assertions.assertEquals()
         //	}
+
+        try {
+            Rectangle r = new Rectangle(10, 15);
+            Assertions.assertEquals(50, r.perimeter());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Test
     public void testArea1(){
-        //todo
         //метод тестирования метода1 {
         //		создаем объект Класса, настраиваем свойства
         //      w=10 l=15   area = 150
         //		Assertions.assertEquals()
         //	}
+        try {
+            Rectangle r = new Rectangle(10, 15);
+            Assertions.assertEquals(150, r.area());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

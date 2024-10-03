@@ -22,11 +22,11 @@ public class Rectangle extends Figure{
 
     @Override
     public double perimeter() {
-        return 0;
+        return 2*(width+length);
     }
 
     @Override
     public double area() {
-        return 0;
+        return width*length;
     }
 }
