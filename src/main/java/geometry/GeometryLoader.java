@@ -4,6 +4,7 @@ package geometry;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +18,8 @@ public class GeometryLoader {
             while ((line = input.readLine()) != null) {
                 splitLine = line.split(" ");
                 try {
+                    if (splitLine.length != 2)
+                        throw new InvalidParameterException("Should be 2 parameters");
                     Double.parseDouble(splitLine[0]);
                     Double.parseDouble(splitLine[1]);
                     rectangles.add(new Rectangle(Double.parseDouble(splitLine[0]), Double.parseDouble(splitLine[1])));

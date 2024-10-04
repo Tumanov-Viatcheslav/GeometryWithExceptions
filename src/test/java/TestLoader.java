@@ -81,4 +81,20 @@ public class TestLoader {
         List<Rectangle> rectangles = GeometryLoader.loadListOfRectangles("src/test/resources/inputCorrect.txt");
         Assertions.assertNotNull(rectangles);
     }
+
+    @Test
+    public void testLoader11() {
+        List<Rectangle> rectangles = Assertions.assertDoesNotThrow(() -> GeometryLoader.loadListOfRectangles("src/test/resources/inputQuestionable.txt"));
+        Assertions.assertEquals(0, rectangles.size());
+    }
+
+    @Test
+    public void testLoader12() {
+        Assertions.assertDoesNotThrow(() -> GeometryLoader.loadListOfRectangles("src/test/resources/inputIncorrect7.txt"));
+    }
+
+    @Test
+    public void testLoader13() {
+        Assertions.assertDoesNotThrow(() -> GeometryLoader.loadListOfRectangles("src/test/resources/inputIncorrect8.txt"));
+    }
 }
